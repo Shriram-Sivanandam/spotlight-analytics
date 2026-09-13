@@ -15,6 +15,7 @@ public class RegistrationAnalyticsService {
     }
 
     public List<RegistrationTrend> getRegistrationTrend(int days) {
+        if (days < 0) days = 30;
         return jdbc.query(
                 """
                 SELECT

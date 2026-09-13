@@ -58,5 +58,5 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/spotlight-analytics:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/spotlight-analytics:${{ github.sha }}
-          cache-from: type=gist
-          cache-to: type=gist,mode=max
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
